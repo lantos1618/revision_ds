@@ -3,7 +3,7 @@
 
 Datastructures and Algorithms recap
 
-- [] Big O
+- [x] Big O
 - [] Arrays
 - [] Linked Lists
 - [] Trees
@@ -151,6 +151,8 @@ Datastructures and Algorithms recap
 
 ## Examples 
 
+check ```src/big_o.nim``` for runnable nim examples
+
 O(1):
 
 ```py
@@ -171,8 +173,8 @@ def binary_search(array, target):
     low = 0
     high = len(array) - 1
     
-    while low <= high:
-        mid = (low + high) // 2
+    while low <= high:              # O(log n)
+        mid = (low + high) // 2     # O(1)
         if array[mid] == target:
             return mid
         elif array[mid] < target:
@@ -188,14 +190,14 @@ O(n):
 ```py
 def find_max(array):
     max_val = array[0]
-    for num in array:
+    for num in array:   # O(n) 
         if num > max_val:
             max_val = num
     return max_val
 
 def count_occurrences(array, target):
     count = 0
-    for num in array:
+    for num in array:    # O(n)
         if num == target:
             count += 1
     return count
@@ -212,7 +214,7 @@ def mergesort(array):
     left = array[:mid]
     right = array[mid:]
     
-    left = mergesort(left)
+    left = mergesort(left)    # O(n log n)
     right = mergesort(right)
     
     return merge(left, right)
@@ -221,8 +223,8 @@ def merge(left, right):
     result = []
     i = j = 0
     
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
+    while i < len(left) and j < len(right):     # O(n)
+        if left[i] < right[j]:                 
             result.append(left[i])
             i += 1
         else:
@@ -240,16 +242,16 @@ O(n^2):
 ```py
 def bubble_sort(array):
     n = len(array)
-    for i in range(n):
-        for j in range(0, n-i-1):
+    for i in range(n):              # O(n)
+        for j in range(0, n-i-1):   # * O(n)
             if array[j] > array[j+1]:
                 array[j], array[j+1] = array[j+1], array[j]
                 
 def find_pairs(array, target):
     pairs = []
     n = len(array)
-    for i in range(n):
-        for j in range(i+1, n):
+    for i in range(n):          # O(n)
+        for j in range(i+1, n): # * O(n)
             if array[i] + array[j] == target:
                 pairs.append((array[i], array[j]))
     return pairs
@@ -262,5 +264,24 @@ def all_subsets(array):
     if len(array) == 0:
         return [[]]
     
-    subsets = all_subsets(array[1:])
+    subsets = all_subsets(array[1:]) # O(2^n)
     return subsets + [[array[0]] + subset for subset in subsets]
+```
+
+
+# Arrays
+
+- [] Basics
+    - Array
+    - OpenArray
+    - Seq
+- [] Array Operations
+    - Accessing
+    - Inserting
+    - Deleting
+    - Searching
+    - Sorting
+
+
+
+## Basics
