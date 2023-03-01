@@ -1,1 +1,23 @@
-bin
+# Ignore binary files
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+# Ignore `bin` dir ORDER MATERS
+bin/
+*/bin/*
+*.out
+*.o
+*.bin
+*.o.dSYM
+
+# secrets
+.env
+server.key
+server.cert
+server.pem
+
+
+# macos
+.DS_store
