@@ -4,20 +4,20 @@
 Datastructures and Algorithms recap
 
 - [x] Big O
-- [] Arrays
-- [] Linked Lists
-- [] Trees
-- [] Stacks
-- [] Queues
-- [] Hash Tables
-- [] Graphs
-- [] Sorting Algorithms
-- [] Searching Algorithms
-- [] Dynamic Programming
-- [] Greedy Algorithms
-- [] Recursion
-- [] Bit Manipulation
-- [] Memory (Stack vs Heap)
+- [ ] Arrays
+- [ ] Linked Lists
+- [ ] Trees
+- [ ] Stacks
+- [ ] Queues
+- [ ] Hash Tables
+- [ ] Graphs
+- [ ] Sorting Algorithms
+- [ ] Searching Algorithms
+- [ ] Dynamic Programming
+- [ ] Greedy Algorithms
+- [ ] Recursion
+- [ ] Bit Manipulation
+- [ ] Memory (Stack vs Heap)
 
 
 # Big O
