@@ -260,12 +260,20 @@ def find_pairs(array, target):
 O(2^n):
 
 ```py
-def all_subsets(array):
-    if len(array) == 0:
+# Returns all subsets of the given sequence
+def all_subsets(seq):
+    # Base case: an empty sequence has only one subset, the empty set
+    if len(seq) == 0:
         return [[]]
-    
-    subsets = all_subsets(array[1:]) # O(2^n)
-    return subsets + [[array[0]] + subset for subset in subsets]
+
+    # Recursive case: generate subsets that include the first element of the sequence
+    subsets = all_subsets(seq[1:])
+    result = []
+    for subset in subsets:
+        result.append(subset)
+        result.append([seq[0]] + subset)
+
+    return result
 ```
 
 
